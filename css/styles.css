@@ -75,7 +75,6 @@ link to the exact top of the page.*/
 /*Add the selector and code to put a 2px black
 border around all elements in focus.*/
 a:focus{
-  outline: none;
   border-top: 2px solid black;
 }
 
@@ -94,7 +93,7 @@ nav{
   text-align: left;
   /*Your code here*/
   /*Span the top row*/
-  grid-row: 1/ auto ;
+  grid-row: 1/ span 1 ;
   grid-column: 1 / -1; 
 }
 
@@ -111,7 +110,7 @@ header{
   background-color: #707070;
   min-height: 400px;
   grid-column: 1 / -1;
-  grid-row: 2 / auto;
+  grid-row: 2 / span 1;
   /* Span one row */
 }
 
@@ -129,20 +128,21 @@ img{
   /*Your code here  */
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: repeat(7,auto);
+  grid-template-rows: 30px  repeat(5, auto) 100px;
   grid-row-gap: 30px;
   /* See documentation for mobile view */
 }
 
 .about, .method, .clients, .contact{
   /*Your code here */
-  grid-column: 2/3;
+  grid-column: 2/ span 1;
   /* See documentation for mobile view */
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
    /*Your code here */
-   grid-column: 1/ span 3;
+   width: 100%;
+   grid-column: 1/ -1;
    max-height: 500px;
    overflow: hidden;
    /* See documentation for mobile view */
@@ -150,25 +150,25 @@ img{
 
 .about, .about-image{
   /*Your code here */
-  grid-row: 3 / auto;
+  grid-row: 3 / span 1;
   /* See documentation for mobile view */
 }
 
 .method, .method-image{
   /*Your code here */
-  grid-row: 4 / auto;
+  grid-row: 4 / span 1;
   /* See documentation for mobile view */
 }
 
 .clients, .clients-image{
   /*Your code here */
-  grid-row: 5 / auto;
+  grid-row: 5 / span 1;
   /* See documentation for mobile view */
 }
 
 .contact, .contact-image{
   /*Your code here */
-  grid-row: 6 / auto;
+  grid-row: 6 / span 1;
   /* See documentation for mobile view */
 }
 
@@ -202,6 +202,7 @@ img{
     background-color: #ddd;
     text-align: right;
     padding: 35px 0px;
+    align-self: center;
   }
 
    .about, .clients, .method-image, .contact-image {
