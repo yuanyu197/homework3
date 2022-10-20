@@ -74,7 +74,7 @@ link to the exact top of the page.*/
 /*Your code here*/
 /*Add the selector and code to put a 2px black
 border around all elements in focus.*/
-a:focus{
+:focus{
   border-top: 2px solid black;
 }
 
@@ -121,15 +121,13 @@ header p{
   padding: 0 100px;
   text-align: center;
 }
-img{
-  width: 100%;
-}
+
 .container{
   /*Your code here  */
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 30px  repeat(5, auto) 100px;
-  grid-row-gap: 30px;
+  row-gap: 30px;
   /* See documentation for mobile view */
 }
 
